@@ -399,8 +399,58 @@ body {
 .profile-table td {
   border: #071647 solid;
 }
+.timesheet-table-common th {
+  background-color: #006fb1;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding: 2px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+.timesheet-table-common td {
+  border: 1px solid #333333;
+  padding: 2px;
+}
+.timesheet-table-common tr:nth-child(even) {
+  background-color: #f3f7f9;
+}
+.timesheet-table-common tr:hover {
+  background-color: #dddddd;
+}
+.task-form {
+  background-color: #ffffff;
+  border-radius: 2%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  padding: 2% 2% 1% 2%;
+  position: fixed;
+  top: 18%;
+  width: 16%;
+}
+.task-form label {
+  color: #071647;
+  font-weight: 700;
+}
+.task-form form input {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.task-form form input[type=text] {
+  padding-right: 24%;
+}
+.task-form form input[type=time] {
+  padding-left: 31%;
+  padding-right: 30%;
+}
+.task-form h3 {
+  margin-top: 0;
+}
 .my-timesheet-table {
   background-color: #f8f5f1;
+  border-collapse: collapse;
   left: 22%;
   opacity: 100;
   position: absolute;
@@ -410,14 +460,16 @@ body {
   background-color: #006fb1;
   border: 1px solid #333333;
   color: #ffffff;
-  padding-bottom: 12px;
-  padding-top: 12px;
-  padding: 8px;
-  text-align: left;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding: 2px;
+  text-align: center;
+  position: sticky;
+  top: 0;
 }
 .my-timesheet-table td {
   border: 1px solid #333333;
-  padding: 8px;
+  padding: 2px;
 }
 .my-timesheet-table tr:nth-child(even) {
   background-color: #f3f7f9;
@@ -433,30 +485,34 @@ body {
   background-color: #ffffff;
   border-radius: 2%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  left: 1%;
   overflow-x: hidden;
-  padding: 2%;
+  padding: 2% 2% 1% 2%;
   position: fixed;
   top: 18%;
   width: 16%;
+  left: 1%;
 }
 .add-task-form label {
   color: #071647;
   font-weight: 700;
 }
+.add-task-form form input {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 .add-task-form form input[type=text] {
-  padding-right: 25%;
+  padding-right: 24%;
 }
 .add-task-form form input[type=time] {
   padding-left: 31%;
   padding-right: 30%;
 }
-.add-task-form form input[type=date] {
-  padding-left: 13%;
-  padding-right: 15%;
-}
 .add-task-form h3 {
   margin-top: 0;
+}
+.add-task-form input[type=date] {
+  padding-left: 13%;
+  padding-right: 14%;
 }
 .my-timesheet-common {
   background-image: linear-gradient(to right, #840388 0%, #d808c3 51%, #840388 100%);
@@ -515,4 +571,145 @@ body {
 .timesheet-nav-division p {
   font-size: 16px;
   margin: 0;
+}
+.search-container {
+  display: flex;
+}
+.search-container .search-section {
+  position: sticky;
+  top: 30%;
+  margin-left: 5%;
+  margin-top: 8%;
+}
+.table-class {
+  background-color: #f8f5f1;
+  border-radius: 10px;
+  left: 4%;
+  position: absolute;
+  top: 35%;
+}
+.record-table {
+  border-collapse: collapse;
+}
+.record-table th {
+  background-color: #006fb1;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding: 2px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+.record-table td {
+  border: 1px solid #333333;
+  padding: 2px;
+}
+.record-table tr:nth-child(even) {
+  background-color: #f3f7f9;
+}
+.record-table tr:hover {
+  background-color: #dddddd;
+}
+#table-id {
+  left: 23%;
+  position: absolute;
+  top: 70%;
+}
+.list-users-admin {
+  margin-top: 10%;
+  margin-left: 35%;
+}
+.list-users-admin .user-list-table {
+  border-collapse: collapse;
+}
+.list-users-admin .user-list-table th {
+  background-color: #006fb1;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding: 2px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+.list-users-admin .user-list-table td {
+  border: 1px solid #333333;
+  padding: 2px;
+}
+.list-users-admin .user-list-table tr:nth-child(even) {
+  background-color: #f3f7f9;
+}
+.list-users-admin .user-list-table tr:hover {
+  background-color: #dddddd;
+}
+#header-fixed {
+  position: fixed;
+  top: 20%;
+  display: none;
+  background-color: white;
+}
+.all-data {
+  background-color: #f8f5f1;
+  border-radius: 10px;
+  left: 5%;
+  opacity: 100;
+  position: absolute;
+  top: 35%;
+}
+.all-data th {
+  background-color: #006fb1;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding: 2px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+.all-data td {
+  border: 1px solid #333333;
+  padding: 2px;
+}
+.all-data tr:nth-child(even) {
+  background-color: #f3f7f9;
+}
+.all-data tr:hover {
+  background-color: #dddddd;
+}
+.update-task-section {
+  background-color: #ffffff;
+  border-radius: 2%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  padding: 2% 2% 1% 2%;
+  position: fixed;
+  top: 18%;
+  width: 16%;
+  left: 40%;
+}
+.update-task-section label {
+  color: #071647;
+  font-weight: 700;
+}
+.update-task-section form input {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.update-task-section form input[type=text] {
+  padding-right: 24%;
+}
+.update-task-section form input[type=time] {
+  padding-left: 31%;
+  padding-right: 30%;
+}
+.update-task-section h3 {
+  margin-top: 0;
+}
+.update-task-section input[type=date] {
+  padding-left: 9%;
+  padding-right: 10%;
 }

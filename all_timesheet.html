@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>All Timesheets</title>
-
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/less/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,15 +52,13 @@
 
             </tbody>
         </table>
+        <!-- <table id="header-fixed"></table> -->
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="service-api/user-service/task-service.js"></script>
     <script>
         $("#header").load("_header.html");
-
-
-
 
         //    getting data
         let userStr = localStorage.getItem("LOGGED_IN_USER");
@@ -81,8 +79,6 @@
                 for (let task of all_task_list) {
 
                     i = i + 1;
-
-
 
                     content = content + `<tr><td>${task.userId}</td><td>${task.attendanceDate}</td><td>${task.name}</td><td>${task.inTime}</td><td>${task.outTime}</td><td>${task.totalHours}</td><td>${task.comments}</td><td><input class="btn btn-success" type="button" id="approveButton" value="Approve" onclick="approveRow(${task.id})" /></td></tr>`;
 
@@ -116,8 +112,6 @@
                     })
             })
 
-
-
         }
     </script>
     <script>
@@ -139,6 +133,20 @@
             }
 
         }
+
+        // var tableOffset = $("#all-timesheet").offset().top;
+        // var $header = $("#all-timesheet > thead").clone();
+        // var $fixedHeader = $("#header-fixed").append($header);
+
+        // $(window).bind("scroll", function() {
+        //     var offset = $(this).scrollTop();
+
+        //     if (offset >= tableOffset && $fixedHeader.is(":hidden")) {
+        //         $fixedHeader.show();
+        //     } else if (offset < tableOffset) {
+        //         $fixedHeader.hide();
+        //     }
+        // });
     </script>
 
     </div>
